@@ -4,6 +4,7 @@
 }
 .pagina-1 .container {
     /* background-color: transparent; */
+    z-index: 15;
 }
 .pagina-2 {
     background: rgb(244,174,91);
@@ -53,14 +54,7 @@
     padding-bottom: 90px;
     filter: drop-shadow(-10px 10px 10px rgba(0, 0, 0, .4));
 }
-@media(max-width:1400px){
-    .bg-1, .bg-2, .bg-3, .bg-4, .bg-5 {
-        background-size: 86% 100%;
-    }
-    .bg-1 .container, .bg-2 .container,.bg-3 .container,.bg-4 .container,.bg-5 .container {
-        margin-right: 150px;
-    }
-}
+
 .bg-2 {
     background-image: url('../design/pg2/bg_texture.jpg');
     background-repeat: repeat-y;
@@ -116,7 +110,7 @@
     background-repeat: no-repeat;
     left: 135px;
     top: 100px;
-    z-index: 99;
+    z-index: 1;
     position: absolute;
 }
 .bg-2::after {
@@ -128,7 +122,7 @@
     background-repeat: no-repeat;
     left: 135px;
     top: 100px;
-    z-index: 99;
+    z-index: 1;
     position: absolute;
 }
 .bg-3::after {
@@ -140,7 +134,7 @@
     background-repeat: no-repeat;
     left: 135px;
     top: 100px;
-    z-index: 99;
+    z-index: 1;
     position: absolute;
 }
 .bg-4::after {
@@ -152,7 +146,7 @@
     background-repeat: no-repeat;
     left: 135px;
     top: 100px;
-    z-index: 99;
+    z-index: 1;
     position: absolute;
 }
 .bg-5::after {
@@ -164,7 +158,7 @@
     background-repeat: no-repeat;
     left: 135px;
     top: 100px;
-    z-index: 99;
+    z-index: 1;
     position: absolute;
 }
 .container-2, .container-3 {
@@ -752,7 +746,47 @@ h4 {
 .floaty {float: left; margin-bottom: 20px; margin-right: 15px; margin-left: -30px;}
 #img-modal {cursor: pointer;} #bt-lupa {background-color: transparent; border: none;}
 .bt-print {margin-top: 60px;}
+/* graficos */
+.grafico {
+    position: absolute;
+    z-index: 1;
+}
+
+.grafico-1 {
+    left: 225px;
+    top: 200px;
+    z-index: 2;
+}
+
+.grafico-2 {
+    right: 100px;
+    top: 600px;
+    position: absolute;
+    z-index: 2;
+}
+.grafico-3 {
+    right: 100px;
+    bottom: 200px;
+    position: absolute;
+    z-index: 2;
+}
+.bg-1 {position: relative;}
+.bg-1 .container {
+    position: relative;
+    z-index: 15;
+}
+
+@media(max-width:1400px){
+    .bg-1, .bg-2, .bg-3, .bg-4, .bg-5 {
+        background-size: 86% 100%;
+    }
+    .bg-1 .container, .bg-2 .container,.bg-3 .container,.bg-4 .container,.bg-5 .container {
+        margin-right: 150px;
+    }
+    .grafico-1 {left: 30px;} .grafico-2 {right: 0px;} .grafico-3 {right: 0;}
+}
 @media (max-width:900px){
+    .grafico {display: none;}
     .bg-1::after, .bg-2::after, .bg-3::after, .bg-4::after, .bg-5::after {display: none;}
     .bg-1, .bg-2, .bg-3, .bg-4, .bg-5 {
         background-image: unset;
