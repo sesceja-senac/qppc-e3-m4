@@ -10,21 +10,25 @@
     background: rgb(244,174,91);
     background: linear-gradient(180deg, rgba(244,174,91,1) 0%, rgba(178,110,27,1) 100%); 
     padding-bottom: 50px;
+    position: relative;
 }
 .pagina-3 {
     background: rgb(206,255,255);
     background: linear-gradient(180deg, rgba(206,255,255,1) 0%, rgba(0,159,171,1) 100%); 
     padding-bottom: 50px;
+    position: relative;
 }
 .pagina-4 {
     background: rgb(0,162,174);
     background: linear-gradient(180deg, rgba(0,162,174,1) 0%, rgba(0,79,83,1) 100%); 
     padding-bottom: 50px;
+    position: relative;
 }
 .pagina-5 {
     background: rgb(224,169,88);
     background: linear-gradient(180deg, rgba(224,169,88,1) 0%, rgba(183,126,50,1) 100%); 
     padding-bottom: 50px;
+    position: relative;
 }
 .pagina-5 .container {
     background-color: #004f53;
@@ -161,7 +165,7 @@
     z-index: 1;
     position: absolute;
 }
-.container-2, .container-3 {
+.container-2, .container-3, .container-4 {
     padding-top: 35px;
     padding-bottom: 35px;
     box-shadow: -8px 8px 8px #00000066;
@@ -442,7 +446,7 @@
     padding-top: 20px;
     padding-left: 35px;
     padding-right: 35px;
-    margin: 35px auto;
+    margin: 45px auto;
     position: relative;
     color: #333;
 }
@@ -454,7 +458,7 @@
     background-image: url('../design/pg5/pc4e3_pg5.png');
     background-size: contain;
     background-repeat: no-repeat;
-    bottom: -73%;
+    bottom: -80px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -477,7 +481,6 @@
 }
 .caixa-img-9 p {
     line-height: 1.5rem;
-    font-size: 20px;
 }
 .caixa-gaita {
     background-color: #00a0ad;
@@ -683,7 +686,6 @@ h4 {
 .cartaMemoria.flip .ladoFrente {
     z-index: 900;
     background-color: transparent;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
     -webkit-transform: rotateY(179deg);
     transform: rotateY(179deg);
 }
@@ -693,7 +695,6 @@ h4 {
     background-color: transparent;
     -webkit-transform: rotateX(0) rotateY(0);
     transform: rotateX(0) rotateY(0);
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
 }
@@ -749,7 +750,7 @@ h4 {
 /* graficos */
 .grafico {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
 }
 
 .grafico-1 {
@@ -770,8 +771,80 @@ h4 {
     position: absolute;
     z-index: 2;
 }
+.grafico-4 {
+    right: 50px;
+    top: 100px;
+    z-index: 2;
+}
+.grafico-5 {
+    left: 50px;
+    z-index: 2;
+    top: 950px;
+}
+.grafico-6 {
+    position: absolute;
+    z-index: 2;
+    max-width: 100%;
+}
+.grafico-7 {
+    position: absolute;
+    z-index: 2;
+    bottom: 1000px;
+    right: 50px;
+}
+.grafico-8 {
+    position: absolute;
+    z-index: 2;
+    max-width: 100%;
+    bottom: 100px;
+}
+.grafico-9 {
+    left: 50px;
+}
+.grafico-10 {
+    top: 1000px;
+    right: 50px;
+}
+.grafico-11 {
+    bottom: 600px;
+    right: 75px;
+}
+.grafico-12 {
+    bottom: 0px;
+    left: 50px;
+}
+.grafico-13 {
+    right: 100px;
+}
+.grafico-14 {
+    right: 0px;
+    top: 2000px;
+}
+.grafico-15 {
+    left: 100px;
+    top: 2600px;
+}
+.grafico-16 {
+    left: 50px;
+    bottom: 1400px;
+}
+.grafico-17 {
+    right: 100px;
+    bottom: 1350px;
+}
+.grafico-18 {
+    bottom: 300px;
+}
+.grafico-19 {
+    right: 100px;
+    bottom: 0px;
+}
+.container-2, .container-3, .container-4 {
+    position: relative;
+    z-index: 15;
+}
 .bg-1 {position: relative;}
-.bg-1 .container {
+.bg-1 .container, .bg-2 .container, .bg-3 .container, .bg-4 .container {
     position: relative;
     z-index: 15;
 }
@@ -786,6 +859,18 @@ h4 {
     .grafico-1 {left: 30px;} .grafico-2 {right: 0px;} .grafico-3 {right: 0;}
 }
 @media (max-width:900px){
+    .pagina-6 {
+        background-image: unset;
+        padding: 15px;
+        padding-bottom: 80px;
+    }
+    .pagina-6 .container {
+        background-color: #f4e2a2;
+        padding-top: 80px;
+        padding-bottom: 10px;
+        box-shadow: -4px -4px 4px rgba(0, 0, 0, .4);
+    }
+    .img-p-1 {max-width: 100%; margin-left: 0;}
     .grafico {display: none;}
     .bg-1::after, .bg-2::after, .bg-3::after, .bg-4::after, .bg-5::after {display: none;}
     .bg-1, .bg-2, .bg-3, .bg-4, .bg-5 {
@@ -805,9 +890,6 @@ h4 {
     .figura-1 img {
         max-width: 100%;
     }
-    .img-pipa {
-        /* width: auto; */
-    }
     #bt-lupa {
         margin: 35px auto;
         display: block;
@@ -816,16 +898,56 @@ h4 {
         background-color: #fff2b3;
         box-shadow: 4px 4px 4px rgba(0, 0, 0, .4);
         background-image: unset;
-        width: 85%;
+        max-width: 85%;
         padding-top: 10px;
         padding-right: 20px;
+        padding-left: 70px;
         height: auto;
+        margin: 60px auto;
     }
     .caixa-img-19 {
-        padding-bottom: 50px;
+        padding-bottom: 80px;
     }
-    .pagina-3 .caixa-img-9, .pagina-3 .caixa-img-10, .pagina-3 .caixa-img-11, .pagina-3 .caixa-img-12 {
-        padding-left: 25px;
+    .caixa-img-18 {width: 70%;}
+    .ico_pergunta::before {
+        content: '';
+        position: absolute;
+        height: 130px;
+        width: 130px;
+        background-image: url('../design/ajuste/ico_pergunta.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: -55px;
+    }
+    .ico_atencao::before {
+        content: '';
+        position: absolute;
+        height: 130px;
+        width: 130px;
+        background-image: url('../design/ajuste/ico_atencao.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: -75px;
+    }
+    .ico_forum::before {
+        content: '';
+        position: absolute;
+        height: 130px;
+        width: 130px;
+        background-image: url('../design/pg1/ico_forum.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: -55px;
+    }
+    .ico_dica::before {
+        content: '';
+        position: absolute;
+        height: 130px;
+        width: 130px;
+        background-image: url('../design/ajuste/ico_dica.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: -55px;
     }
     video {
         width: 100%;        
