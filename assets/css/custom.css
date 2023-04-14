@@ -850,6 +850,10 @@ h4 {
 }
 
 @media(max-width:1400px){
+    .grafico-19, .grafico-17, .grafico-14, .grafico-13, .grafico-11, .grafico-10, .grafico-7, .grafico-4, .grafico-3, .grafico-2 {right: 0;}
+    .grafico-16, .grafico-15, .grafico-12, .grafico-10, .grafico-9, .grafico-5, .grafico-1 {
+        left: 0;
+    }
     .bg-1, .bg-2, .bg-3, .bg-4, .bg-5 {
         background-size: 86% 100%;
     }
