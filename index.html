@@ -1,26 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Bootstrap CSS v5.0.2 -->      
+    <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/animate.min.css" />
     <link rel="stylesheet" href="assets/fa/css/all.min.css">
-    <title>Tela inicial</title>
+    <link rel="stylesheet" href="assets/css/preloader.css">
+    <link rel="stylesheet" href="assets/css/tela_inicial.css">
+    <title>Qualificação profissional: Produtor cultural</title>
 </head>
+
 <body>
-    <div class="container pt-4">
-        
+    <div class="preloader">
+        <div class="anim"></div>
+        <h1>Aguarde enquanto o conteúdo é carregado.</h1>
     </div>
-   
+    <div id="wrapper">
+        
+        <div class="start__container">
+            <div class="start">
+                <a href="/conteudo/index.html" class="start-btn"></a>
+                <img src="assets/design/telainicial/logo_sesc.png" alt="" class="logo">
+            </div>
+            <img src="assets/design/telainicial/figura1.png" class="img img-1">
+            <img src="assets/design/telainicial/figura2.png" class="img img-2">
+            <img src="assets/design/telainicial/figura3.png" class="img img-3">
+            <img src="assets/design/telainicial/figura4.png" class="img img-4">
+            <img src="assets/design/telainicial/figura5.png" class="img img-5">
+            <img src="assets/design/telainicial/figura6.png" class="img img-6">
+            <img src="assets/design/telainicial/figura7.png" class="img img-7">
+            <img src="assets/design/telainicial/figuras_mobile.png" alt="" class="img-mobile">
+        </div>
+    </div>
+    <div class="backdrop">
+        <div class="modal-video">
+            <div class="wrapper">
+                <button id="fechar-video">X</button>
+                <p>Olá! Antes de começar, assista ao vídeo introdutório sobre o módulo a seguir:</p>
+                <iframe src="https://www.youtube.com/embed/5ck4nXHbmWI" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <img src="assets/design/telainicial/bt_hover.png" class="preload">
+
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
     <!--Jquery-->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
-    
+    <script src="assets/js/tela_inicial.js"></script>
+
 </body>
 
 </html>

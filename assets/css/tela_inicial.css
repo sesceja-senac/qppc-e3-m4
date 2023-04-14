@@ -1,0 +1,258 @@
+#wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../design/telainicial/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.start__container {
+    width: 1183px;
+    max-width: 100%;
+    height: 842px;
+    position: relative;
+    margin-top: 1000px;
+    transition-duration: 0.5s;
+}
+.start {
+    width: 1183px;
+    max-width: 100%;
+    height: 842px;
+    background-image: url('../design/telainicial/folder.png');
+    position: relative;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 170px;
+    background-color: transparent;
+}
+.start-btn {
+    width: 306px;
+    height: 109px;
+    background-image: url('../design/telainicial/bt.png');
+}
+.start-btn:hover {
+    background-image: url('../design/telainicial/bt_hover.png');
+}
+.preload {
+    position: absolute;
+    top: -200px;
+}
+.logo {
+    position: absolute;
+    bottom: 40px;
+    right: 120px;
+    z-index: 16;
+}
+
+/* slides: */
+.img {
+    position: absolute;
+    transition-duration: .5s;
+}
+.img-1 {    
+    top: 50px;
+    left: 0px;
+}
+.img-2 {
+    bottom: 0;
+    right: 0px;
+}
+.img-4 {
+    top: 0;
+    left: 40%;
+    transform: translateX(-50%);
+}
+
+/* fade in: */
+.img-3 {
+    top: -100px;
+    right: 0;
+    z-index: 16;
+    opacity:0;
+    transition-duration: 1s;
+}
+.img-5 {
+    bottom: 25%;
+    right: -100px;
+    z-index: 16;
+    opacity:0;
+    transition-duration: 1s;
+}
+.img-6 {
+    bottom: 10%;
+    left: -300px;
+    z-index: 16;
+    opacity:0;
+    transition-duration: 1s;
+}
+.img-7 {
+    bottom: 0;
+    left: -300px;
+    z-index: 16;
+    opacity:0;
+    transition-duration: 1s;
+}
+
+/* ativos */
+.start__container.animated{margin-top: 0;}
+.img-1.animated {left: -250px;}
+.img-2.animated {right: -180px;}
+.img-4.animated {top: -75px;}
+.img-3.animated{opacity: 1;}
+.img-5.animated{opacity: 1;}
+.img-6.animated{opacity: 1;}
+.img-7.animated{opacity: 1;}
+
+/* mobile */
+.img-mobile {
+    position: absolute;
+    transition-duration: 1s;
+    top: 0;
+}
+.img-mobile.animated{top: -40%;}
+
+/* modal */
+.backdrop {
+    background-color: rgba(25,25,25, .9);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+}
+
+.modal-video {
+    background-image: url('../design/telainicial/Video-apresentacao-gd.png');
+    width: 1133px;
+    height: 708px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 260px;
+    padding-top: 120px;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.modal-video iframe {
+    height: 300px;
+    width: 600px;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 15px;
+    max-width: 100%;
+}
+
+#fechar-video {
+    position: absolute;
+    top: 60px;
+    right: 200px;
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 2px 2px 3px #333;
+    transition-duration: .3s;
+}
+#fechar-video:hover {
+    background-color: #ff8b01;
+    color: white;
+    transition-duration: .3s;
+}
+.img-mobile{display: none;}
+@media(max-width:1400px){
+    .start__container {
+        transform: scale(0.8);
+    }
+    .modal-video {top: 10px;}
+}
+@media(max-width:1000px){
+    .img-mobile{display: block;}
+    .img {display: none;}
+    #wrapper {
+        align-items: end;
+    }
+    .start {
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 800px;
+        background-position: center;
+        margin-top: 200px;
+    }
+    .logo{bottom: 150px;}
+    .modal-video {
+        width: 100%;
+        padding: 100px 150px;
+        top: 200px;
+    }
+    .modal-video iframe {
+        width: 360px;
+        height: 240px;
+        display: block;
+        margin: 10px auto;
+    }
+    #fechar-video {
+        top: 50px;
+        right: 130px;
+    }
+}
+@media (max-width:600px){
+    .start {
+        height:400px;
+        background-position: top;
+        margin-top: 400px;
+        padding-bottom: 100px;
+    }
+    .img-mobile{
+        width: 100%;
+        top: 30%;
+    }
+    .img-mobile.animated{
+        top: 0;
+    }
+    .logo {
+        top: 40px;
+        right: 50px;
+        width: 50px;
+    }
+    .modal-video {
+        width: 100%;
+        background-color: #007981;
+        background-image: unset;
+        padding: 15px;
+        height: auto;
+        text-align: center;
+        position: relative;
+        transform: unset;
+        left: unset;
+        top: unset;
+    }
+    .modal-video iframe {
+        display: block;
+        margin: 15px auto;
+        margin-bottom: 40px;
+    }
+    #fechar-video {
+        top: -20px;
+        right: 20px;
+    }
+    .backdrop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
