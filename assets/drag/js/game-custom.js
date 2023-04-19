@@ -37,6 +37,10 @@ var slot12 = 0;
 var slot22 = 0;
 var slot32 = 0;
 
+// Teste IDs cards
+var card1 = document.getElementById("#card-2");
+var card2 = document.getElementById("#card-3");
+
 // Solução ao dragindrop
 
 dragula({
@@ -49,8 +53,11 @@ dragula({
 }).on('drag', function(el, source) {
   // On mobile this prevents the default page scrolling while dragging an item.
   scrollable = false;
-}).on("drop", function(){
+  
+}).on("drop", function(el){
   scrollable = true;
+
+  //alert('INFO: '+el.id);
 
     if(slot1 == 0 && $('#slot-1').children().length>0){
       $('#casual-acerto').modal('show')
@@ -65,8 +72,21 @@ dragula({
       slot3 = 1
     }
     if(slot12 == 0 && $('#slot-12').children().length>0){
-      $('#primeiro-acerto').modal('show')
-      slot12 = 1
+      if(el.id == 'card-2'){
+        $('#modal-card1').modal('show')
+      }
+      if(el.id == 'card-3'){
+        $('#modal-card2').modal('show')
+      }
+      if(el.id == 'card-1'){
+        $('#modal-card3').modal('show')
+      }
+      if(el.id == 'card-4'){
+        $('#modal-card6').modal('show')
+      }
+
+    //  $('#primeiro-acerto').modal('show')
+    //  slot12 = 1
     }
     if(slot22 == 0 && $('#slot-22').children().length>0){
       $('#segundo-acerto').modal('show')
@@ -77,17 +97,25 @@ dragula({
       slot32 = 1
     }
 
-      audio.setAttribute('src','audios/acerto.mp3'); //change the source
+      audio.setAttribute('src','../assets/drag/audios/acerto.mp3'); //change the source
       audio.load(); //load the new source
       audio.play(); //play
 
-}).on("cancel", function(){
+}).on("cancel", function(el){
   scrollable = true;
+
+
+  if(el.id == 'card-6'){
+    $('#modal-card4').modal('show')
+  }
+  if(el.id == 'card-5'){
+    $('#modal-card5').modal('show')
+  }
 
       // Executa o áudio e a modal necessária
       // Também é possível fazer algum teste aqui caso necessário.
-  $('#bgmodal-erro').modal('show')
-      audio.setAttribute('src','audios/erro.mp3'); //change the source
+  //$('#bgmodal-erro').modal('show')
+      audio.setAttribute('src','../assets/drag/audios/erro.mp3'); //change the source
       audio.load(); //load the new source
       audio.play(); //play
 });

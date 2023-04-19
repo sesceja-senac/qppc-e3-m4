@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'PermanentMarker';
+    src: url('../font/PermanentMarker.ttf');
+}
+
 .pagina-1 {
     background-color: #00878f;
     padding-bottom: 50px;
@@ -291,7 +296,7 @@
     align-items: center;
     padding-top: 0px;
     padding-left: 65px;
-    padding-right: 115px;
+    padding-right: 105px;
     margin: 35px auto;
     position: relative;
     color: #333;
@@ -502,22 +507,22 @@
     top: -20px;
 }
 .caixa-gaita p {margin-bottom: 0;}
-.caixa-img-5::after {
+.caixa-img-5::after, .caixa-img-7::after {
     content: '';
     position: absolute;
     height: 130px;
     width: 130px;
-    background-image: url('../design/pg1/ico_importante.png');
+    background-image: url('../design/pg2/ico_dica.png');
     background-size: contain;
     background-repeat: no-repeat;
     left: -75px;
 }
-.caixa-img-7::after {
+.caixa-img-8::after {
     content: '';
     position: absolute;
     height: 130px;
     width: 130px;
-    background-image: url('../design/pg1/ico_importante.png');
+    background-image: url('../design/pg2/ico_importante.png');
     background-size: contain;
     background-repeat: no-repeat;
     left: -75px;
@@ -532,7 +537,17 @@
     background-repeat: no-repeat;
     left: -55px;
 }
-.caixa-img-1::after, .caixa-img-3::after, .caixa-img-4::after {
+.caixa-img-1::after, .caixa-img-3::after{
+    content: '';
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    background-image: url('../design/pg1/ico_pergunta.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: -80px;
+}
+.caixa-img-4::after {
     content: '';
     position: absolute;
     height: 130px;
@@ -557,9 +572,10 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 600px;
+    max-width: 640px;
     margin: 35px auto 0 auto;
 }
+/*
 .painel-pg2 button {
     width: 153px;
     margin: 10px;
@@ -600,6 +616,49 @@
 .painel-pg2 button:nth-child(5):hover {
     background-image: url('../design/pg2/bt5_hover.png');
 }
+*/
+
+.btn-painel_pg2{
+    border: none;
+    margin: 10px;
+}
+.painel-pg2-btn01{
+    background: url('../design/pg2/bt1.png') no-repeat;
+    background-size:contain;
+    width: 180px;
+    height: 189px;
+}
+.painel-pg2-btn02{
+    background: url('../design/pg2/bt2.png') no-repeat;
+    background-size:contain;
+    width: 181px;
+    height: 189px;
+}
+.painel-pg2-btn03{
+    background: url('../design/pg2/bt3.png') no-repeat;
+    background-size:contain;
+    width: 190px;
+    height: 190px;
+}
+.painel-pg2-btn04{
+    background: url('../design/pg2/bt4.png') no-repeat;
+    background-size:contain;
+    width: 180px;
+    height: 187px;
+}
+.painel-pg2-btn05{
+    background: url('../design/pg2/bt5.png') no-repeat;
+    background-size:contain;
+    width: 128px;
+    height: 165px;
+}
+.painel-pg2-btn01:hover{background-image: url('../design/pg2/bt1_hover.png');}
+.painel-pg2-btn02:hover{background-image: url('../design/pg2/bt2_hover.png');}
+.painel-pg2-btn03:hover{background-image: url('../design/pg2/bt3_hover.png');}
+.painel-pg2-btn04:hover{background-image: url('../design/pg2/bt4_hover.png');}
+.painel-pg2-btn05:hover{background-image: url('../design/pg2/bt5_hover.png');}
+
+
 video {
     background-color: #333;
     border-radius: 10px;
@@ -849,6 +908,54 @@ h4 {
     z-index: 15;
 }
 
+
+.marca-texto{
+    background-color: #faeba2;
+}
+.marca-texto2{
+    background-color: #90eb88;
+}
+.caixa-img-4, .caixa-img-5{
+    font-family: PermanentMarker;
+}
+
+.destaque-refletir{
+    background: url('../design/pg2/dest_refletir.png') no-repeat;
+    background-size: 100%;
+    width: 500px;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 188px;
+    padding-right: 16px;
+    margin: 10px auto 50px auto;
+}
+.destaque-refletir p{
+    margin-top: 40px;
+}
+
+.game-body {
+    border: 5px solid #00828b !important;
+}
+.ico-praticar{
+    width: 115px !important;
+    position: absolute !important;
+    top: auto !important;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.texto-ampliar{
+    color: #333 !important;
+    text-decoration: none !important;
+    text-align: center;
+}
+.carousel-item a{
+    text-decoration: none !important;
+}
+
+
 @media(max-width:1400px){
     .grafico-19, .grafico-17, .grafico-14, .grafico-13, .grafico-11, .grafico-10, .grafico-7, .grafico-4, .grafico-3, .grafico-2 {right: 0;}
     .grafico-16, .grafico-15, .grafico-12, .grafico-10, .grafico-9, .grafico-5, .grafico-1 {
@@ -898,7 +1005,16 @@ h4 {
         margin: 35px auto;
         display: block;
     }
-    .caixa-img-1, .caixa-img-2, .caixa-img-3, .caixa-img-4, .caixa-img-5, .caixa-img-6, .caixa-img-7, .caixa-img-8, .caixa-img-9, .caixa-img-10, .caixa-img-11, .caixa-img-12, .caixa-img-13, .caixa-img-14, .caixa-img-15, .caixa-img-16, .caixa-img-17, .caixa-img-18, .caixa-img-19, .caixa-img-20 {
+
+    .caixa-img-1, .caixa-img-3{
+        max-width: 85%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 10px;
+        margin-left: 50px;
+    }
+    .caixa-img-2, .caixa-img-4, .caixa-img-5, .caixa-img-6, .caixa-img-7, .caixa-img-8, .caixa-img-9, .caixa-img-10, .caixa-img-11, .caixa-img-12, .caixa-img-13, .caixa-img-14, .caixa-img-15, .caixa-img-16, .caixa-img-17, .caixa-img-18, .caixa-img-19, .caixa-img-20 {
         background-color: #fff2b3;
         box-shadow: 4px 4px 4px rgba(0, 0, 0, .4);
         background-image: unset;
@@ -992,5 +1108,27 @@ h4 {
         height: auto;
         padding-top: 1.5rem;
         padding-bottom: 15px;
+    }
+}
+
+@media(max-width: 480px){
+    .destaque-refletir{
+        background: url('../design/pg2/destaque1.png') no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 190px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        margin: 10px auto 50px auto;
+    }
+    .destaque-refletir p{
+        margin-top: 10px;
+    }
+
+    .ico-praticar{
+        margin-top: 40px;
+        margin-left: 10px;
     }
 }
